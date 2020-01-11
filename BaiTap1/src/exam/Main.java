@@ -29,7 +29,7 @@ public class Main {
         list.themShape(ellipse);
         list.themShape(square);
         
-        // list.hienThiThongTin(list.getDs());
+        list.hienThiThongTin(list.getDs());
         
         List<Shape> listTang = list.sapSepTangDan(list.getDs());
         System.out.println("Dien tich tang dan");

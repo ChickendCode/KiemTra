@@ -38,7 +38,7 @@ public class ShapeList {
     
     public static void hienThiThongTin(List<Shape> list) {
         for (int i = 0; i < list.size(); i++) {
-            list.get(i).toString();
+            System.out.println(list.get(i).toString());
         }
     }
     
