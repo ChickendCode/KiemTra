@@ -40,4 +40,8 @@ public class Ellipse extends Shape {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    @Override
+    public String toString() {
+        return String.format("Dien tich va chu vi Ellipse la %s, %s", this.dienTich(), this.chuVi());
+    }
 }

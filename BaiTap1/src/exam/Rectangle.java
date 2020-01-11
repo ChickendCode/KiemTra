@@ -47,4 +47,9 @@ public class Rectangle extends Shape{
         double c = (this.chieuDai + this.chieuRong) * 2;
         return c;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("Dien tich va chu vi Rectangle la %s, %s", this.dienTich(), this.chuVi());
+    }
 }

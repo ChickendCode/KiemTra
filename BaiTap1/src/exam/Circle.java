@@ -37,4 +37,9 @@ public class Circle extends Shape {
         double c = 2*Math.PI*this.banKinh;
         return c;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Dien tich va chu vi Circle la %s, %s", this.dienTich(), this.chuVi());
+    }
 }
