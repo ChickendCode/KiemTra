@@ -6,6 +6,8 @@
 
 package exam;
 
+import java.util.List;
+
 /**
  *
  * @author tranduykhanh
@@ -22,6 +24,23 @@ public class Main {
         Shape ellipse = new Ellipse(4, 4);
         Shape square = new Square(4);
         
+        list.themShape(circle);
+        list.themShape(rectangle);
+        list.themShape(ellipse);
         list.themShape(square);
+        
+        // list.hienThiThongTin(list.getDs());
+        
+        List<Shape> listTang = list.sapSepTangDan(list.getDs());
+        System.out.println("Dien tich tang dan");
+        for (int i = 0; i < listTang.size(); i++) {
+            System.out.println(listTang.get(i).dienTich());
+        }
+        
+        List<Shape> listGiam = list.sapSepGiamDan(list.getDs());
+        System.out.println("Chu vi giam dan");
+        for (int i = 0; i < listTang.size(); i++) {
+            System.out.println(listGiam.get(i).chuVi());
+        }
     }
 }

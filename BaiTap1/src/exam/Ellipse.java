@@ -36,7 +36,7 @@ public class Ellipse extends Shape {
 
     @Override
     public double chuVi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return 2;
     }
     
     @Override
