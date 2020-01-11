@@ -10,15 +10,16 @@ package exam;
  *
  * @author tranduykhanh
  */
-public class Main {
+public abstract class Shape {
+    protected Point point;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Point p = new Point();
-        p.setX(1);
-        p.setY(2);
-        System.err.println(p.toString());
+    public Shape() {
     }
+
+    public Shape(Point point) {
+        this.point = point;
+    }
+
+    public abstract double dienTich();
+    public abstract double chuVi();
 }
