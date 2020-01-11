@@ -36,13 +36,6 @@ public class ShapeList {
         this.ds.add(shape);
     }
     
-    public void themShape(Scanner scanner) {
-        // Shape shape = new Shape();
-        //ch.nhapCH(scanner);
-        
-        //this.ds.add(ch);
-    }
-    
     public static void hienThiThongTin(List<Shape> list) {
         for (int i = 0; i < list.size(); i++) {
             list.get(i).toString();
@@ -55,6 +48,18 @@ public class ShapeList {
                 if(s1.dienTich() == s2.dienTich())
                     return 0;
                 return s1.dienTich() < s2.dienTich() ? -1 : 1;
+            }
+       });
+        
+       return list;
+    }
+    
+    public static List<Shape> sapSepGiamDan(List<Shape> list) {
+        Collections.sort(list, new Comparator<Shape>(){
+            public int compare(Shape s1, Shape s2){
+                if(s1.chuVi() == s2.chuVi())
+                    return 0;
+                return s1.chuVi() > s2.chuVi() ? -1 : 1;
             }
        });
         

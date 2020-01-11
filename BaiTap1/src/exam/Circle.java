@@ -13,8 +13,7 @@ package exam;
 public class Circle extends Shape {
     private double banKinh;
 
-    public Circle(double banKinh, Point point) {
-        super(point);
+    public Circle(double banKinh) {
         this.banKinh = banKinh;
     }
 

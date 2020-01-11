@@ -14,8 +14,7 @@ public class Rectangle extends Shape{
     private double chieuDai;
     private double chieuRong;
 
-    public Rectangle(double chieuDai, double chieuRong, Point point) {
-        super(point);
+    public Rectangle(double chieuDai, double chieuRong) {
         this.chieuDai = chieuDai;
         this.chieuRong = chieuRong;
     }
