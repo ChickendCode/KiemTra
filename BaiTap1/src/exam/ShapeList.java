@@ -6,7 +6,11 @@
 
 package exam;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -14,6 +18,46 @@ import java.util.List;
  */
 public class ShapeList {
     private List<Shape> ds;
+
+    public ShapeList() {
+        this.ds = new ArrayList<>();
+    }
+
+    public List<Shape> getDs() {
+        return ds;
+    }
+
+    public void setDs(List<Shape> ds) {
+        this.ds = ds;
+    }
     
     
+    public void themShape(Shape shape) {
+        this.ds.add(shape);
+    }
+    
+    public void themShape(Scanner scanner) {
+        // Shape shape = new Shape();
+        //ch.nhapCH(scanner);
+        
+        //this.ds.add(ch);
+    }
+    
+    public static void hienThiThongTin(List<Shape> list) {
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).toString();
+        }
+    }
+    
+    public static List<Shape> sapSepTangDan(List<Shape> list) {
+        Collections.sort(list, new Comparator<Shape>(){
+            public int compare(Shape s1, Shape s2){
+                if(s1.dienTich() == s2.dienTich())
+                    return 0;
+                return s1.dienTich() < s2.dienTich() ? -1 : 1;
+            }
+       });
+        
+       return list;
+    }
 }
