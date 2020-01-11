@@ -15,14 +15,6 @@ public class Ellipse extends Shape {
     private double chieuDaiTrucA;
     private double chieuDaiTrucB;
 
-    public Ellipse() {
-    }
-
-    public Ellipse(double chieuDaiTrucA, double chieuDaiTrucB) {
-        this.chieuDaiTrucA = chieuDaiTrucA;
-        this.chieuDaiTrucB = chieuDaiTrucB;
-    }
-
     public Ellipse(double chieuDaiTrucA, double chieuDaiTrucB, Point point) {
         super(point);
         this.chieuDaiTrucA = chieuDaiTrucA;
