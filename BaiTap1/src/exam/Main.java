@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package baitap1;
+package exam;
 
 /**
  *
  * @author AdMins
  */
-public class BaiTap1 {
+public class Main {
 
     /**
      * @param args the command line arguments
