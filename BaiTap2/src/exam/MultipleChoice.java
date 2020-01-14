@@ -15,8 +15,11 @@ import java.util.Scanner;
  */
 public class MultipleChoice extends CauHoi {
 
-    public MultipleChoice(String noiDung, List<PhuongAn> phuongAn, MucDo mucDo, String danhMuc) {
-        super(noiDung, phuongAn, mucDo, danhMuc);
+    public MultipleChoice() {
+    }
+
+    public MultipleChoice(String noiDung, MucDo mucDo, String danhMuc) {
+        super(noiDung, mucDo, danhMuc);
     }
 
     @Override

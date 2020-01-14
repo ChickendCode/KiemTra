@@ -6,6 +6,7 @@
 
 package exam;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,10 +20,17 @@ public abstract class CauHoi {
     protected List<PhuongAn> phuongAn;
     protected MucDo mucDo;
     protected String danhMuc;
+    
+    {
+        phuongAn = new ArrayList<>();
+    }
+    
 
-    public CauHoi(String noiDung, List<PhuongAn> phuongAn, MucDo mucDo, String danhMuc) {
+    public CauHoi() {
+    }
+
+    public CauHoi(String noiDung, MucDo mucDo, String danhMuc) {
         this.noiDung = noiDung;
-        this.phuongAn = phuongAn;
         this.mucDo = mucDo;
         this.danhMuc = danhMuc;
     }
@@ -82,6 +90,11 @@ public abstract class CauHoi {
         }
         
         return false;
+    }
+    
+    public void themPhuongAn(PhuongAn pa) {
+        if (this.phuongAn.size() < NHAN.length)
+            this.phuongAn.add(pa);
     }
     
     @Override
