@@ -25,11 +25,11 @@ public class MultipleChoice extends CauHoi {
     @Override
     public void luyenTap(List<CauHoi> ds, Scanner scanner) {
         System.out.println("---- Dạng câu hỏi MultipleChoice ---");
-        System.out.println("Nhập số câu hỏi muốn luyện tập : ");
+        System.out.print("Nhập số câu hỏi muốn luyện tập : ");
         int soCauHoi = scanner.nextInt();
         
-        if (soCauHoi > ds.size()) {
-            System.out.print("Số câu hỏi vượt quá danh sách câu hỏi");
+        if (soCauHoi > demMultiChoice(ds)) {
+            System.out.println("Số câu hỏi vượt quá danh sách câu hỏi của MultipleChoice");
             return;
         }
         
@@ -47,5 +47,16 @@ public class MultipleChoice extends CauHoi {
             else
                 System.out.println("SAI RỒI!!!");
         }
+    }
+    
+    private int demMultiChoice(List<CauHoi> ds) {
+        int dem = 0;
+        
+        for (CauHoi c: ds) {
+            if (c instanceof MultipleChoice) {
+                dem++;
+            }
+        }
+        return dem;
     }
 }
