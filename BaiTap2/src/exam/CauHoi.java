@@ -12,8 +12,20 @@ import java.util.List;
  *
  * @author tranduykhanh
  */
-public class CauHoi {
-    private String noiDung;
-    private final String[] NHAN = {"A", "B", "C", "D"};
-    private List<PhuongAn> phuongAn;
+public abstract class CauHoi {
+    protected String noiDung;
+    protected final String[] NHAN = {"A", "B", "C", "D"};
+    protected List<PhuongAn> phuongAn;
+    protected MucDo mucDo;
+    protected String danhMuc;
+
+    public CauHoi(String noiDung, List<PhuongAn> phuongAn, MucDo mucDo, String danhMuc) {
+        this.noiDung = noiDung;
+        this.phuongAn = phuongAn;
+        this.mucDo = mucDo;
+        this.danhMuc = danhMuc;
+    }
+    
+    public abstract CauHoi timCauHoi(String noiDung);
+    public abstract void luyenTap();
 }
