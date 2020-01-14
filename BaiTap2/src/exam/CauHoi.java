@@ -83,4 +83,14 @@ public abstract class CauHoi {
         
         return false;
     }
+    
+    @Override
+    public String toString() {
+        String s = String.format("%s\n", this.noiDung);
+        
+        for (int i = 0; i < this.phuongAn.size(); i++)
+            s += String.format("%s. %s", NHAN[i], this.phuongAn.get(i));
+        
+        return s;
+    }
 }

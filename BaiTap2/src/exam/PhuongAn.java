@@ -44,4 +44,9 @@ public class PhuongAn {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("%s\n", this.noiDung);
+    }
 }
