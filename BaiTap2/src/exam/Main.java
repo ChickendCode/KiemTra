@@ -72,6 +72,14 @@ public class Main {
         ds.add(c2);
         ds.add(c3);
         ds.add(c4);
+        
+        // Tim cau hoi
+        System.out.println("--- Tim cau hoi ---------");
+        CauHoi timCauhoi = multi.timCauHoi(ds, "Ban tên là gì?");
+        System.out.println(timCauhoi);
+        System.out.println("--- Tim cau hoi ---------");
+        
+        // Luyen tap
         multi.luyenTap(ds, scanner);
         imcom.luyenTap(ds, scanner);
     }

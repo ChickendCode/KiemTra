@@ -6,8 +6,11 @@
 
 package exam;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  *
@@ -32,12 +35,10 @@ public class MultipleChoice extends CauHoi {
             System.out.println("Số câu hỏi vượt quá danh sách câu hỏi của MultipleChoice");
             return;
         }
-        
-        for (CauHoi c: ds) {
-            if (c instanceof Incomplete) {
-                continue;
-            }
-            
+        List<CauHoi> dsMulti = getMultiChoices(ds);
+        for (int i = 0; i < soCauHoi; i++) {
+            int index = getRandomIndex(dsMulti);
+            CauHoi c = dsMulti.get(index);
             System.out.println(c);
             System.out.print("Trả lời của bạn: ");
             String da = scanner.next();
@@ -58,5 +59,21 @@ public class MultipleChoice extends CauHoi {
             }
         }
         return dem;
+    }
+    
+    private List<CauHoi> getMultiChoices(List<CauHoi> ds) {
+        List<CauHoi> cauHoi = new ArrayList<>();
+        
+        for (CauHoi c: ds) {
+            if (c instanceof MultipleChoice) {
+                cauHoi.add(c);
+            }
+        }
+        return cauHoi;
+    }
+    
+    private int getRandomIndex(List<CauHoi> ds) {
+        int index = ThreadLocalRandom.current().nextInt(ds.size());		
+	return index;
     }
 }

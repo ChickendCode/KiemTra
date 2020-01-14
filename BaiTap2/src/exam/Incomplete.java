@@ -50,6 +50,7 @@ public class Incomplete extends CauHoi {
     }
     
     public MucDo getMucDo(String mucDo) {
+        mucDo = mucDo.toUpperCase();
         MucDo mucDoEnum = null;
         switch(mucDo) {
             case "K":
