@@ -21,6 +21,45 @@ public class Incomplete extends CauHoi {
 
     @Override
     public void luyenTap(List<CauHoi> ds, Scanner scanner) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("---- Dạng câu hỏi Incomplete ---");
+        System.out.print("Chọn mức độ cho câu hỏi : ");
+        System.out.print("Khó (K) :  ");
+        System.out.print("Trung Bình (TB) : ");
+        System.out.print("Dễ (D) : ");
+        String mucDo = scanner.next();
+        MucDo mucDoEnum = getMucDo(mucDo);
+        
+        for (CauHoi c: ds) {
+            
+            if (c instanceof MultipleChoice || !c.getMucDo().equals(mucDoEnum)) {
+                continue;
+            }
+            
+            System.out.println(c);
+            System.out.print("Trả lời của bạn: ");
+            String da = scanner.next();
+            
+            if (c.ktDapAn(da) == true)
+                System.out.println("CHÍNH XÁC!!!");
+            else
+                System.out.println("SAI RỒI!!!");
+        }
+    }
+    
+    public MucDo getMucDo(String mucDo) {
+        MucDo mucDoEnum = null;
+        switch(mucDo) {
+            case "K":
+                mucDoEnum = MucDo.KHO;
+                break;
+            case "TB":
+                mucDoEnum = MucDo.TRUNGBINH;
+            break;
+            case "D":
+                mucDoEnum = MucDo.DE;
+            break;
+            default:
+        }
+        return mucDoEnum;
     }
 }
