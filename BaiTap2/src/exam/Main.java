@@ -21,7 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        QuanLyCauHoi ds = new QuanLyCauHoi();
+        List<CauHoi> ds = new ArrayList<>();;
         
         PhuongAn pa1 = new PhuongAn("An", true, "Ghi chu 1");
         PhuongAn pa2 = new PhuongAn("Duy", false, "Ghi chu 2");
@@ -32,9 +32,9 @@ public class Main {
         phuongAnMultipleChoice1.add(pa3);
         CauHoi cauHoi1 = new MultipleChoice("Ban tên là gì?", phuongAnMultipleChoice1, MucDo.DE, "Muc 1");
         
-        ds.themCauHoi(cauHoi1);
+        ds.add(cauHoi1);
         
         
-        cauHoi1.luyenTap(ds.getDs(), scanner);
+        cauHoi1.luyenTap(ds, scanner);
     }
 }
