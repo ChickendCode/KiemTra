@@ -21,8 +21,8 @@ public class MultipleChoice extends CauHoi {
 
     @Override
     public void luyenTap(List<CauHoi> ds, Scanner scanner) {
-        System.out.print("---- Dạng câu hỏi MultipleChoice ---");
-        System.out.print("Nhập số câu hỏi muốn luyện tập : ");
+        System.out.println("---- Dạng câu hỏi MultipleChoice ---");
+        System.out.println("Nhập số câu hỏi muốn luyện tập : ");
         int soCauHoi = scanner.nextInt();
         
         if (soCauHoi > ds.size()) {

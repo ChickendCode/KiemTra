@@ -6,9 +6,13 @@
 
 package exam;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
- * @author AdMins
+ * @author tranduykhanh
  */
 public class Main {
 
@@ -16,7 +20,21 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+        QuanLyCauHoi ds = new QuanLyCauHoi();
+        
+        PhuongAn pa1 = new PhuongAn("An", true, "Ghi chu 1");
+        PhuongAn pa2 = new PhuongAn("Duy", false, "Ghi chu 2");
+        PhuongAn pa3 = new PhuongAn("Thanh", false, "Ghi chu 3");
+        List<PhuongAn> phuongAnMultipleChoice1 = new ArrayList<PhuongAn>();
+        phuongAnMultipleChoice1.add(pa1);
+        phuongAnMultipleChoice1.add(pa2);
+        phuongAnMultipleChoice1.add(pa3);
+        CauHoi cauHoi1 = new MultipleChoice("Ban tên là gì?", phuongAnMultipleChoice1, MucDo.DE, "Muc 1");
+        
+        ds.themCauHoi(cauHoi1);
+        
+        
+        cauHoi1.luyenTap(ds.getDs(), scanner);
     }
-    
 }

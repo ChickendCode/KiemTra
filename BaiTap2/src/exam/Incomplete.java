@@ -21,11 +21,11 @@ public class Incomplete extends CauHoi {
 
     @Override
     public void luyenTap(List<CauHoi> ds, Scanner scanner) {
-        System.out.print("---- Dạng câu hỏi Incomplete ---");
-        System.out.print("Chọn mức độ cho câu hỏi : ");
-        System.out.print("Khó (K) :  ");
-        System.out.print("Trung Bình (TB) : ");
-        System.out.print("Dễ (D) : ");
+        System.out.println("---- Dạng câu hỏi Incomplete ---");
+        System.out.println("Chọn mức độ cho câu hỏi : ");
+        System.out.println("Khó (K) :  ");
+        System.out.println("Trung Bình (TB) : ");
+        System.out.println("Dễ (D) : ");
         String mucDo = scanner.next();
         MucDo mucDoEnum = getMucDo(mucDo);
         
