@@ -7,6 +7,7 @@
 package exam;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -17,15 +18,26 @@ public class MultipleChoice extends CauHoi {
     public MultipleChoice(String noiDung, List<PhuongAn> phuongAn, MucDo mucDo, String danhMuc) {
         super(noiDung, phuongAn, mucDo, danhMuc);
     }
-    
-    @Override
-    public CauHoi timCauHoi(String noiDung) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
-    public void luyenTap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void luyenTap(List<CauHoi> ds, Scanner scanner) {
+        System.out.print("Nhập số câu hỏi muốn luyện tập : ");
+        int soCauHoi = scanner.nextInt();
+        
+        if (soCauHoi > ds.size()) {
+            System.out.print("Số câu hỏi vượt quá danh sách câu hỏi");
+            return;
+        }
+        
+        for (CauHoi c: ds) {
+            System.out.println(c);
+            System.out.print("Trả lời của bạn: ");
+            String da = scanner.next();
+            
+            if (c.ktDapAn(da) == true)
+                System.out.println("CHÍNH XÁC!!!");
+            else
+                System.out.println("SAI RỒI!!!");
+        }
     }
-    
 }

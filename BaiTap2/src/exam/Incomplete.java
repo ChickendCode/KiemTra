@@ -7,6 +7,7 @@
 package exam;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -19,13 +20,7 @@ public class Incomplete extends CauHoi {
     }
 
     @Override
-    public CauHoi timCauHoi(String noiDung) {
+    public void luyenTap(List<CauHoi> ds, Scanner scanner) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void luyenTap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
