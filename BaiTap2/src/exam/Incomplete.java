@@ -15,6 +15,9 @@ import java.util.Scanner;
  */
 public class Incomplete extends CauHoi {
 
+    public Incomplete() {
+    }
+
     public Incomplete(String noiDung, MucDo mucDo, String danhMuc) {
         super(noiDung, mucDo, danhMuc);
     }

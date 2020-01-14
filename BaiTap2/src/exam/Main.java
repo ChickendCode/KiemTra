@@ -22,19 +22,57 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<CauHoi> ds = new ArrayList<>();
-        CauHoi ch = new MultipleChoice();
-        
-        PhuongAn pa1 = new PhuongAn("An", true, "Ghi chu 1");
-        PhuongAn pa2 = new PhuongAn("Duy", false, "Ghi chu 2");
-        PhuongAn pa3 = new PhuongAn("Thanh", false, "Ghi chu 3");
+        CauHoi multi = new MultipleChoice();
+        CauHoi imcom = new Incomplete();
        
-        CauHoi cauHoi1 = new MultipleChoice("Ban tên là gì?", MucDo.DE, "Muc 1");
-        cauHoi1.themPhuongAn(pa1);
-        cauHoi1.themPhuongAn(pa2);
-        cauHoi1.themPhuongAn(pa3);
+        CauHoi c1 = new MultipleChoice("Ban tên là gì?", MucDo.DE, "Muc 1");
+        PhuongAn c1Pa1 = new PhuongAn("An", true, "Ghi chu 1");
+        PhuongAn c1Pa2 = new PhuongAn("Duy", false, "Ghi chu 2");
+        PhuongAn c1Pa3 = new PhuongAn("Thanh", false, "Ghi chu 3");
+        c1.themPhuongAn(c1Pa1);
+        c1.themPhuongAn(c1Pa2);
+        c1.themPhuongAn(c1Pa3);
+        
+        CauHoi c2 = new Incomplete("This ...  a book", MucDo.KHO, "Muc 1");
+        PhuongAn c2Pa1 = new PhuongAn("am", false, "Ghi chu 1");
+        PhuongAn c2Pa2 = new PhuongAn("are", false, "Ghi chu 2");
+        PhuongAn c2Pa3 = new PhuongAn("is", true, "Ghi chu 3");
+        PhuongAn c2Pa4 = new PhuongAn("were", false, "Ghi chu 4");
+        
+        c2.themPhuongAn(c2Pa1);
+        c2.themPhuongAn(c2Pa2);
+        c2.themPhuongAn(c2Pa3);
+        c2.themPhuongAn(c2Pa4);
         
         
-        ds.add(cauHoi1);
-        ch.luyenTap(ds, scanner);
+        CauHoi c3 = new Incomplete("This ...  a car", MucDo.TRUNGBINH, "Muc 1");
+        PhuongAn c3Pa1 = new PhuongAn("am", false, "Ghi chu 1");
+        PhuongAn c3Pa2 = new PhuongAn("are", false, "Ghi chu 2");
+        PhuongAn c3Pa3 = new PhuongAn("is", true, "Ghi chu 3");
+        PhuongAn c3Pa4 = new PhuongAn("were", false, "Ghi chu 4");
+        
+        c3.themPhuongAn(c3Pa1);
+        c3.themPhuongAn(c3Pa2);
+        c3.themPhuongAn(c3Pa3);
+        c3.themPhuongAn(c3Pa4);
+        
+        CauHoi c4 = new Incomplete("This ...  a cat", MucDo.DE, "Muc 1");
+        PhuongAn c4Pa1 = new PhuongAn("am", false, "Ghi chu 1");
+        PhuongAn c4Pa2 = new PhuongAn("are", false, "Ghi chu 2");
+        PhuongAn c4Pa3 = new PhuongAn("is", true, "Ghi chu 3");
+        PhuongAn c4Pa4 = new PhuongAn("were", false, "Ghi chu 4");
+        
+        c4.themPhuongAn(c4Pa1);
+        c4.themPhuongAn(c4Pa2);
+        c4.themPhuongAn(c4Pa3);
+        c4.themPhuongAn(c4Pa4);
+        
+        
+        ds.add(c1);
+        ds.add(c2);
+        ds.add(c3);
+        ds.add(c4);
+        multi.luyenTap(ds, scanner);
+        imcom.luyenTap(ds, scanner);
     }
 }
